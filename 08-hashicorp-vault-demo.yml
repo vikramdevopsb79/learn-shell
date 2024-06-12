@@ -3,7 +3,6 @@
   tasks:
     - name: Read a kv2 secret
       ansible.builtin.debug:
-        msg: "{{ secrets.MYSQL_PASS }}"
+        msg: "{{ secrets.MY_SQL_PASS }}"
       vars:
         secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=expense-secret/data/backend token={{token}} url=https://vault-internal.vikramdevops.tech:8200 validate_certs=false') }}"
-
