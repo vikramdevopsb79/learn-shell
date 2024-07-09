@@ -6,3 +6,7 @@
         msg: "{{ secrets.MY_SQL_PASS }}"
       vars:
         secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=expense-dev/data/backend token={{token}} url=https://vault-internal.vikramdevops.tech:8200 validate_certs=false') }}"
+
+
+
+# Here we need to know how we can know the encrypted password for ansible code using secrect management . In ansible we found module print with msg whether we are able to read the message after use that as variable to access that variable
