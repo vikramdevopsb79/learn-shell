@@ -5,7 +5,7 @@
       ansible.builtin.debug:
         msg: "{{ secrets.MY_SQL_PASS }}"
       vars:
-        secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=expense-dev/backend token={{token}} url=https://vault-internal.vikramdevops.tech:8200 validate_certs=false') }}"
+        secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=expense-dev/backend token={{token}} url=https://vault-internal.vikramdevops.store:8200 validate_certs=false') }}"
 
 
 
